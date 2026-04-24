@@ -21,7 +21,7 @@ from langchain.tools.retriever import create_retriever_tool
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain import hub
 
-load_dotenv("Sistema IA/.env")  # Carga variables de entorno desde .env
+load_dotenv()  # Carga variables de entorno desde .env
 
 # Configuración de modelos (IE5: Arquitectura)
 llm = ChatOpenAI(
@@ -39,7 +39,7 @@ embeddings = OpenAIEmbeddings(
 
 # Pipeline RAG y Configuración de Chunks (IE3, IE4)
 def inicializar_agente_rrhh():
-    loader = PyPDFLoader("RA1/data/manual_empleado.pdf")
+    loader = PyPDFLoader("data/manual_empleado.pdf")
     docs = loader.load()
     
     # Fragmentación para precisión (1000 caracteres con 150 de solapamiento)

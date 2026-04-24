@@ -2,7 +2,6 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 from Codigo import agent_executor # Importa la lógica del agente
-
 # Configuración visual de la página
 st.set_page_config(page_title="HR-Bot TechSolutions", page_icon="🤖")
 st.title("🤖 HR-Bot: TechSolutions Chile")
